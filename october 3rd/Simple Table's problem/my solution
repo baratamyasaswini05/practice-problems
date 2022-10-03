@@ -9,7 +9,5 @@ object Solution {
             if(res%i==0 && (res/i)<=n) c+=1
         }
         println(c)
-        
-        
     }
 }
