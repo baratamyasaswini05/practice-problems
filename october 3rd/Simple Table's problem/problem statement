@@ -1,0 +1,17 @@
+Let's consider a table consisting of n rows and n columns. The cell located at the intersection of i-th row and j-th column contains number i × j. The rows and columns are numbered starting from 1.
+
+You are given a positive integer x. Your task is to count the number of cells in a table that contain number x.
+
+Input Format
+
+The single line contains numbers n and x the size of the table and the number that we are looking for in the table.
+
+Constraints
+
+1 ≤ n ≤ 10^5
+
+1 ≤ x ≤ 10^9
+
+Output Format
+
+Print a single number: the number of times x occurs in the table.
