@@ -1,0 +1,12 @@
+object Solution {
+
+    def main(args: Array[String]) {
+        var s=scala.io.StdIn.readLine()
+        var v=List('a','e','i','o','u','y','A','E','I','O','U','Y')
+        var out=""
+        for(i<-s){
+            if(!v.contains(i)) out+="."+i.toString
+        }
+        println(out.toLowerCase)
+    }
+}
