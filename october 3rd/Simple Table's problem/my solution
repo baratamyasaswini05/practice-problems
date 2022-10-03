@@ -1,6 +1,5 @@
 import scala.util.control.Breaks._
 object Solution {
-
     def main(args: Array[String]) {
         var s=scala.io.StdIn.readLine().split(" ")
         var (n,res)=(s(0).toInt,s(1).toInt)
