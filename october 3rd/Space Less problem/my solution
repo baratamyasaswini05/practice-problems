@@ -1,0 +1,16 @@
+import scala.io.StdIn._
+object Solution {
+
+    def main(args: Array[String]) {
+        var t=readInt()
+        for(i<- 1 to t){
+            var n=readLine().split(" ")
+            var (a,b)=(n(0).toInt , n(1))
+            var s=""
+            for(j<- 1 to a){
+                s+=j.toString
+            }
+            println(s.sliding(b.length).count(_==b))
+        }
+    }
+}
