@@ -1,0 +1,11 @@
+object Solution {
+    def main(args: Array[String]) {
+        var x=scala.io.StdIn.readLine().split(" ")
+        def sd(a:String):String={
+            if(a.length==1) a
+            else sd(a.split("").map(_.toInt).sum.toString)
+        }
+        print(sd(((x(0).split("").map(_.toInt).sum)*x(1).toInt).toString))
+        
+    }
+}
