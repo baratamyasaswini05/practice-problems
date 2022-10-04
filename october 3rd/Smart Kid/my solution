@@ -7,7 +7,7 @@ object Solution {
             var (n,k)=(nk(0),nk(1))
             var ll=scala.io.StdIn.readLine().split(" ").map(_.toInt)
             var l=ll.toList.sorted
-            var rl=l.sorted(Ordering.Int.reverse)
+            var rl=l.reverse
             println((((l.take(k).sum)-(l.drop(k).sum)).abs).max(((rl.take(k).sum)-(rl.drop(k).sum)).abs))
         }
     }
