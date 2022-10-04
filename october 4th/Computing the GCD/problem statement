@@ -1,9 +1,9 @@
-Given two integers,  and , a recursive technique to find their GCD is the Euclidean Algorithm.
+Given two integers, x and y, a recursive technique to find their GCD is the Euclidean Algorithm.
 
-The algorithm states that, for computing the GCD of two positive integers  and , if  and  are equal, . Otherwise  if . There are a few optimizations that can be made to the above logic to arrive at a more efficient implementation.
+The algorithm states that, for computing the GCD of two positive integers x and y, if x and y are equal, GCD(x,y)=x . Otherwise GCD(x,y)=GCD(x-y,y) if x>y . There are a few optimizations that can be made to the above logic to arrive at a more efficient implementation.
 
 Task
-Given the starter code, you need to complete a function body that returns the GCD of two given integers  and .
+Given the starter code, you need to complete a function body that returns the GCD of two given integers x and y.
 The task of reading in input and printing the output will be handled by us.
 
 Programming Language Support
@@ -11,10 +11,10 @@ At this point of time, we have a template for Scala. This means that we provide 
 
 Input Format
 
-One line of input containing  space separated integers.
+One line of input containing 2 space separated integers.
 
 Constraints
-
+1<=a,b<=10 pow 8
 
 Output Format
 
