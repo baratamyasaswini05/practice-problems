@@ -1,0 +1,17 @@
+object Solution {
+
+    def main(args: Array[String]) {
+        var n=scala.io.StdIn.readInt()
+        var ll=List[String]()
+        for(h<- Range(0,n)){
+            var i=scala.io.StdIn.readLine()
+            var l=List[String]()
+            for(j<-1 to i.length){
+                var s=i.slice(j,i.length)+i.slice(0,j)+" "
+                l:+=s
+            }
+            l.map(print(_))
+            println()
+        }
+    }
+}
