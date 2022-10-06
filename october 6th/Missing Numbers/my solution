@@ -1,0 +1,11 @@
+object Solution {
+
+    def main(args: Array[String]) {
+        var a1=scala.io.StdIn.readInt
+        var a=scala.io.StdIn.readLine.split(" ").map(_.toInt).toList
+        var b1=scala.io.StdIn.readInt
+        var b=scala.io.StdIn.readLine.split(" ").map(_.toInt).toList
+        var h=(b diff a).distinct.sorted
+        for(i<-h) print(i+" ")
+    }
+}
