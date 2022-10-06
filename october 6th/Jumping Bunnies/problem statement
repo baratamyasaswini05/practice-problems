@@ -1,0 +1,21 @@
+Bunnies are very cute animals who likes to jump a lot. Every bunny has his own range of jump. Lets say there are N bunnies and ith (i belongs to [1,N])  bunny jumps j(i) units. Consider a 1-D plane, where initially bunnies are at 0. All of them starts jumping in forward direction.
+
+For example, consider the case of kth bunny. Initially he is at 0. After first jump, he will be at point j(k). After second, he will be at 2*j(k) and so on. After mth jump, he will be at point m*j(k).
+
+Two bunnies can only meet each other when they are on the ground. When on the ground, a bunny can wait any amount of time. Being a social animal, all of them decide to meet at the next point where all of them will be on the ground. You have to find the nearest point where all the bunnies can meet.
+
+For example, if there are N=3 bunnies where j(1)=2,j(2)=3 ,j(3)=4 . Nearest point where all bunnies can meet again is at 12. First bunny has to jump six times, for second it is 4 times and for third it is 3 times.
+
+Help bunnies to find the nearest point where they can meet again.
+
+Input Format
+First line will contain an integer,N , represeting the number of bunnies. Second line will contain N space separated integer,j(1),j(2),....,j(N) , representing the jumping distance of them.
+
+Output Format
+Print the nearest location where all bunnies can meet again.
+
+Constraints
+2<=N<=10
+1<=j(i)<=10 pow 6
+
+For each test case it is guaranteed that solution will not exceed .
