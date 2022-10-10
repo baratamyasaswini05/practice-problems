@@ -1,0 +1,18 @@
+You are in charge of data transfer between two Data Centers. Each set of data is represented by a pair of strings. Over a period of time you have observed a trend: most of the times both strings share some prefix. You want to utilize this observation to design a data compression algorithm which will be used to reduce amount of data to be transferred.
+
+You are given two strings,x  and y, representing the data, you need to find the longest common prefix (p) of the two strings. Then you will send substring p,x'  and y', where x' and y' are the substring left after stripping  from them.
+
+For example, if x= "abcdefpr" and y= "abcpqr", then p= "abc", x'= "defpr", y'= "pqr".
+
+Input Format
+
+The first line contains a single string denoting x.
+The second line contains a single string denoting y.
+
+Constraints
+x and y will contain only lowercase Latin characters ('a'-'z').
+1<=length(x),length(y)<= 10 pow 5
+
+Output Format
+
+In first line, print the length of substring p, followed by prefix p. In second line, print the length of substring x', followed by substring x'. Similary in third line, print the length of substring y', followed by substring y'.
