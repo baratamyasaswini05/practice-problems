@@ -1,0 +1,22 @@
+import scala.io.StdIn._
+object Solution {
+
+    def main(args: Array[String]) {
+        var t=readInt
+        for(h<- 1 to t){
+            var lll=readLine.split(" ").map(_.toInt)
+            var k=lll(1)
+            var l=readLine.split(" ").map(_.toInt).toList
+            var m=l.groupBy(n => n).map(x => (x._1,x._2.length))
+            var l2=m.keys.filter(x => m(x) >= k).toList
+            if(l2.length == 0) print(-1)
+            else{
+                var l3=l2.groupBy(n => n).map(x => (x._1 , l.indexOf(x._1)))
+                for(i<- l3.values.toList.sorted){
+                    print(l(i)+" ")
+                }
+            }
+            println()
+        }
+    }
+}
