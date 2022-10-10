@@ -1,0 +1,16 @@
+object Solution {
+    def main(args: Array[String]) {
+        val n = scala.io.StdIn.readInt
+
+        for (nItr <- 1 to n) {
+            val x = scala.io.StdIn.readDouble
+            var out=1+x
+            var fact=1
+            for(i<- 2 to 9){
+                fact *= i
+                out += (scala.math.pow(x,i))/fact
+            }
+            println((out*10000).round/10000.toDouble)
+        }
+    }
+}
