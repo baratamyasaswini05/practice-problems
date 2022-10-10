@@ -1,0 +1,28 @@
+We define super digit of an integer x using the following rules:
+
+If x has only 1 digit, then its super digit is x.
+Otherwise, the super digit of x is equal to the super digit of the digit-sum of x. Here, digit-sum of a number is defined as the sum of its digits.
+For example, super digit of 9875 will be calculated as:
+
+super_digit(9875) = super_digit(9+8+7+5) 
+                  = super_digit(29) 
+                  = super_digit(2+9)
+                  = super_digit(11)
+                  = super_digit(1+1)
+                  = super_digit(2)
+                  = 2.
+You are given two numbers n and k. You have to calculate the super digit of p.
+
+p is created when number n is concatenated k times. That is, if n=123 and k=3, then p=123123123.
+
+Input Format
+
+The first line contains two space separated integers, n and k.
+
+Constraints
+1<=n< 10 pow 100000
+1<=k<=10 pow 5
+
+Output Format
+
+Output the super digit of p, where p is created as described above.
