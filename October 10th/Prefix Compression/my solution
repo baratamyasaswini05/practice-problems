@@ -1,0 +1,46 @@
+import scala.util.control.Breaks._
+object Solution {
+
+    def main(args: Array[String]) {
+        var p=scala.io.StdIn.readLine
+        var q=scala.io.StdIn.readLine
+        var pn=p.length
+        var qn=q.length
+        
+        if(p == q){
+            println(pn+" "+p)
+            println(0)
+            println(0)
+            System.exit(0)
+        }
+
+        var x = -1
+        
+        breakable{
+            for(i<- 0 to (pn.min(qn))-1){
+                if(p(i) != q(i)) {
+                    x=i
+                    break
+                }
+            } 
+        }
+        
+        if(x == -1){
+            if(pn>qn){
+                println(qn+" "+q)
+                println((pn-qn)+" "+p.substring(qn))
+                println(0)
+            }
+            else{
+                println(pn+" "+p)
+                println(0)
+                println((qn-pn)+" "+q.substring(pn))
+            }
+        }
+        else{
+                println(x+" "+p.slice(0,x))
+                println((pn-x)+" "+p.substring(x))
+                println((qn-x)+" "+q.substring(x))
+        }
+    }
+}
