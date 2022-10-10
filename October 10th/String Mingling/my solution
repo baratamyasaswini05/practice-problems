@@ -1,0 +1,8 @@
+object Solution {
+
+    def main(args: Array[String]) {
+        var p=scala.io.StdIn.readLine
+        var q=scala.io.StdIn.readLine
+        println(p.zip(q).foldLeft("")((x,y)=>(x+y._1+y._2)))
+    }
+}
