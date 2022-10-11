@@ -1,0 +1,51 @@
+import scala.io.StdIn._
+import scala.util.control.Breaks._
+object Solution {
+
+    def main(args: Array[String]) {
+        var t=readInt
+        for(i<- 1 to t){
+            var n=readInt
+            var sl=readLine.split(" ").toList
+            var pp=readLine
+            var p = pp+" "
+            
+            var m=scala.collection.mutable.Map[String,Int]()
+            var c=0
+            var f=0
+            
+            breakable{
+                for(j<- sl){
+                    var s = p.split(j).toList
+                    c = s.length-1
+                    m(j)=c
+                    p = s.mkString
+                    if(p.length == 1 && p == " ") {
+                        f=1
+                        break
+                    }
+                }
+            }
+            
+            if(f==0) println("WRONG PASSWORD")
+            else{
+                for((k,v) <- m) if(v == 0) m.remove(k)
+                var mm=scala.collection.mutable.Map[Int,String]()
+                for((k,v) <- m){
+                    var q= -1
+                    for(g<- 1 to v){
+                        q = pp.indexOf(k,q+1)
+                        mm(q)=k
+                    }
+                } 
+                
+                var lll=mm.keys.toList.sorted
+                for(e<- lll){
+                    if(e != lll.max) print(mm(e)+" ")
+                    else print(mm(e))
+                }
+                if(i != t) println()
+            }
+        }
+    }
+}
