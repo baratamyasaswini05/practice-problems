@@ -1,0 +1,17 @@
+import scala.util.control.Breaks._
+object Solution {
+
+    def main(args: Array[String]) {
+        var t=scala.io.StdIn.readInt
+        for(i<- 1 to t){
+            var x=scala.io.StdIn.readLong
+            if(x%2 == 0){ 
+                x = x/2
+                println(x*(5+(6*(x-1))))
+            }
+            else{
+                println(x*(1+(3*((x-1)/2))))
+            }
+        }
+    }
+}
