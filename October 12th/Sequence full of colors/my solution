@@ -1,0 +1,52 @@
+import scala.util.control.Breaks._
+object Solution {
+    def main(args: Array[String]) {
+        var t=scala.io.StdIn.readInt
+        for(i<- 1 to t){
+            breakable{
+                var s=scala.io.StdIn.readLine
+                var r=s.count(_ == 'R')
+                var g=s.count(_ == 'G')
+                var y=s.count(_ == 'Y')
+                var b=s.count(_ == 'B')
+                
+                if( !((r == g) &&  (y == b)) ){
+                    println("False")
+                }
+                else {
+                    for( i<- s.length-1 to 0 by -1){
+                        if(s(i) == 'R'){
+                            r-=1
+                            if((r-g).abs > 1){
+                                println("False")
+                                break
+                            }
+                        }
+                        else if(s(i) == 'G'){
+                            g-=1
+                            if((r-g).abs > 1){
+                                println("False")
+                                break
+                            }
+                        }
+                        else if(s(i) == 'Y'){
+                            y-=1
+                            if((y-b).abs > 1){
+                                println("False")
+                                break
+                            }
+                        }
+                        else if(s(i) == 'B'){
+                            b-=1
+                            if((y-b).abs > 1){
+                                println("False")
+                                break
+                            }
+                        }  
+                    }
+                    println("True")
+                } 
+            }
+        }
+    }
+}
