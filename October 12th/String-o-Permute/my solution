@@ -1,0 +1,11 @@
+object Solution {
+
+    def main(args: Array[String]) {
+        var t=scala.io.StdIn.readInt
+        for(i<- 1 to t){
+            var l=List[Char]() 
+            var s=scala.io.StdIn.readLine
+            println(s.sliding(2,2).map(_.reverse).mkString)
+        }
+    }
+}
