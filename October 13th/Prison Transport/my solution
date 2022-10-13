@@ -1,0 +1,51 @@
+import scala.io.StdIn._
+import scala.math._
+import scala.util.control.Breaks._
+import scala.collection.mutable.ListBuffer
+object Solution{
+
+    def main(args: Array[String]) {
+        var t=readLong
+        var l=List[List[Long]]()
+        var np=readInt
+        for(i<- 0 to np-1){
+            var s=readLine.split(" ").map(_.toLong).toList
+            l :+= s
+        }
+        def tr(arr:List[List[Long]],d:List[Long]):List[List[Long]]={
+            var x=arr
+            var v=List[List[Long]]()
+            for(i<- d){
+                var a=List[Long]()
+                for(j<- x){
+                    if(j.contains(i)){
+                        a ++= j
+                        x = x.filter(_ != j)
+                    }
+                }
+                v ++= List(a.distinct)
+            }
+            var h = v ::: x
+            h
+        }
+        
+        breakable{
+            while(true){
+                var a=l.flatten
+                var b=a.distinct
+                if(a.length != b.length){
+                    var dup=(a diff b).distinct
+                    l=tr(l,dup)
+                }
+                else break
+            }
+        }
+        
+        var rem=t-(l.flatten.length)
+        var res=rem
+        for(k<- l){
+            res += sqrt(k.length).ceil.toLong
+        }
+        println(res)
+    }
+}
